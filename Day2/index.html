@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicons link -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Golden Sneaker</title>
+
+</head>
+<body>
+    <div class="product-card">
+        <div class="logo-cart">
+            <img src="./assets/img/logo-nike.png" alt="Nike-Logo">
+            <i class='bx bx-shopping-bag' ></i>
+        </div>
+
+        <div class="main-images">
+            <img class="blue active" class="green-nike active" src="./assets/img/green.png" alt="Blue">
+            <img class="pink " class="pink-nike " src="./assets/img/Pink.png" alt="Pink">
+            <img class="yellow "  class="yellow-nike " src="./assets/img/yellow.png" alt="Yellow">
+        </div>
+        <div class="show-details">
+            <span class="shoe-name">Nike Zoom Fly 3 Premium</span>
+            <p>Inspired by the Vaporfly, the Nike Zoom Fly 3 Premium gives distance runners race-day comfort and durability. The power of a carbon fiber plate keeps you in the running mile after mile.</p>
+            <div class="stars">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bx-star' ></i>
+            </div>
+        </div>
+
+        <div class="color-price">
+            <div class="color-option">
+                <span class="color">Color: </span>
+                <div class="circles">
+                    <span class="circle blue active" id="blue"></span>
+                    <span class="circle pink" id="pink"></span>
+                    <span class="circle yellow" id="yellow"></span>
+                </div>
+            </div>
+            <div class="price">
+                <div class="price-number">$160.00</div>
+                <!-- <div class="price-letter">One hundred sixty dollars</div> -->
+            </div>
+           
+        </div>
+
+        <div class="button">
+            <div class="button-player"></div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+
+    <script>    
+        
+        let circle = document.querySelector(".color-option");
+        circle.addEventListener("click", (e) => {
+            let target = e.target;
+            if(target.classList.contains("circle")){
+                circle.querySelector(".active").classList.remove("active");
+                target.classList.add("active");
+                document.querySelector(".main-images .active").classList.remove("active");
+                document.querySelector(`.main-images .${target.id}`).classList.add("active");
+            }
+        });
+
+    </script>
+</body>
+</html>

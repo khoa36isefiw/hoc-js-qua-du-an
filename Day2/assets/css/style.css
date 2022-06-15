@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #43CBFF 8%, #9708CC 100%);
+}
+.product-card {
+    position:relative;
+    max-width: 355px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 20px 30px 30px 30px;
+    overflow: hidden;
+    z-index: 3;
+    background-color: #fff;
+}
+.product-card .logo-cart img{
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
+.product-card .logo-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-cart .bx-shopping-bag{
+    font-size: 27px;
+    color: #707070;
+    transition: color 0.3 ease;
+}
+
+.logo-cart .bx-shopping-bag:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+
+
+.product-card .main-images {
+    position: relative;
+    height: 220px;
+}
+
+.product-card .main-images img {
+    position: absolute;
+    width: 290px;
+    height: 380px;
+    object-fit: cover;
+    transform: rotate(-26deg);
+    margin-left: -12px;
+    top: -98px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.product-card .main-images img.active {
+    opacity: 1;
+}
+
+.show-details .shoe-name {
+    font-size: 24px;
+    font-weight: 500;
+    color: #161616;
+}
+
+.show-details p {
+    color: #777;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    letter-spacing: -1.2px;
+}
+
+.show-details .stars i {
+    margin: 0 -1px;
+    color: #333;
+    margin-top: 4px;
+    color: #ffce3d;
+
+}
+
+.color-price .color-option {
+    display: flex;
+    align-items: center;
+}
+
+.color-price .color-option .color {
+    font-size: 18px;
+    font-weight: 500;
+    color:  #333;
+    margin-top: 4px;
+
+}
+
+.color-option .circles {
+    display: flex;
+    margin-left: 8px;
+}
+
+.color-option .circles .circle {
+    height: 18px;
+    width: 18px;
+    background: #0071c7;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.color-option .circles .circle.blue.active {
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #0071C7;
+}
+
+.color-option .circles .circle.pink{
+   background-color: #FA1795;
+}
+
+.color-option .circles .circle.pink.active {
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #FA1795;
+}
+
+.color-option .circles .circle.yellow{
+    background-color: #F5DA00;
+}
+
+.color-option .circles .circle.yellow.active {
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #F5DA00;
+}
+
+.color-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-price .color {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.color-price .price .price-number {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 4px;
+    margin-left: 32px;
+}
+
+.color-price .price .price-letter {
+    font-size: 12px;
+    color: #707070;
+    font-weight: 450;
+    margin-top: 4px;
+    /* line-height: 20px; */
+}
+
+
+/*Button: Add to cart*/
+.product-card .button {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.product-card .button button:hover  {
+    cursor: pointer;
+}
+
+.product-card .button button {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.product-card .button .button-player {
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    background-image: linear-gradient(135deg,#99daf4, #9708CC, #43CBFF, #08cc98);
+    left: -100%;
+    transition: all 0.4s ease;
+}
+
+.product-card .button:hover .button-player {
+    left: 0;
+}
